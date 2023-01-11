@@ -1,0 +1,153 @@
+@import "../../../css-config/mixins.scss";
+
+.hero-banner {
+     
+     padding: 40px 0px;
+     position: relative;
+     background-color: #0e1111;
+     @include md {
+        height: calc(100vh - 80px);
+     }
+     .content {
+          height: 100%;
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+          flex-direction: column;
+          max-width: calc(100% - 20px);
+          margin: 0 auto;
+          position: relative;
+          @include md {
+               flex-direction: row;
+               max-width: 1200px;
+          }
+
+     }
+
+     .banner-img {
+  
+        
+        width: 400px;
+        margin-bottom: 20px;
+        margin-left: 0;
+        margin-right: 0;
+         
+         
+
+           @include md {
+
+            width: 410px;
+            margin-right: 60px;
+            margin-top: 50px;
+            margin-bottom: 0;
+        }
+
+        @include lg {
+
+            width: 450px;
+            margin-top: 30px;
+            
+        }
+
+
+           @include xxl {
+                width: 600px;
+                margin-right: 60;
+                margin-top: 0;
+           }
+        
+        }
+   
+
+        .text-content {
+
+              color: rgb(255, 255, 255); 
+              text-align: center;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              margin-top: 40px;
+              
+
+
+              @include md {
+                
+               
+               transform: translateY(-20%);
+               margin-top:80px;
+               margin-left: 30px;
+                
+              }
+
+              @include xxl {
+                  left: 50px;
+              }
+              h1 {
+                  font-size: 45px;
+                  font-weight: 400;
+                  line-height: 1;
+                  margin-bottom: 20px;
+                  @include md {
+                      font-size: 55px;
+                  }
+              }
+
+              p {
+
+                  max-width: 300px;
+                  font-size: 15px;
+                  line-height: 20px;
+                  margin-bottom: 20px;
+                  
+
+                  @include md {
+                         max-width: 500px;
+                         font-size: 19px;
+                         line-height: 24px;
+                         margin-bottom: 40px;
+                         font-weight: 300;
+                       
+                        
+                  }
+              }
+
+              .action {
+
+                   display: flex;
+                   justify-content: center;
+                   gap: 25px;
+                   
+              }
+
+              .banner-action-v1 {
+                   
+                 text-transform: uppercase;
+                 font-size: 12px;
+                 font-weight: 500;
+                 padding: 10px 15px;
+                 cursor: pointer;
+                 background-color: #79c2d0;
+                 border-radius: 8px;
+                 transition: all ease 0.3s;
+                 &:hover {
+                    background-color: #99d0db;
+                }
+              }
+
+              .banner-action-v2 {
+                   
+                text-transform: uppercase;
+                font-size: 12px;
+                font-weight: 500;
+                padding: 10px 15px;
+                cursor: pointer;
+                background-color: #79c2d0;
+                border-radius: 8px;
+                transition: all ease 0.3s;
+                &:hover {
+                    
+                    background-color: #99d0db;
+                }
+             }
+        }
+ }

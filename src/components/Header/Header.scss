@@ -1,0 +1,89 @@
+@import "../../css-config/mixins.scss";
+
+.main-header {
+  width: 100%;
+  padding: 0 20px;
+  background-color: #fff7eb;
+  color: #333333;
+
+  @include md {
+    padding: 0 40px;
+  }
+
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    height: 65px;
+    margin: 0 auto;
+    @include md {
+      height: 80px;
+    }
+
+    .left {
+      list-style-type: none;
+      display: none;
+      gap: 25px;
+      @include md {
+        display: flex;
+      }
+
+      li {
+        font-size: 13px;
+        font-weight: bold;
+        text-transform: uppercase;
+        cursor: pointer;
+      }
+    }
+
+    .center {
+      cursor: pointer;
+      margin-top: 3px;
+    }
+
+    .right {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      svg {
+        font-size: 20px;
+        cursor: pointer;
+      }
+
+      .cart-icon {
+        position: relative;
+        span {
+          min-width: 20px;
+          text-align: center;
+          background-color: #79c2d0;
+          padding: 2.5px;
+          position: absolute;
+          top: -5px;
+          right: -12px;
+          font-size: 12px;
+          line-height: 1;
+          border-radius: 10px;
+        }
+      }
+    }
+  }
+
+
+
+  &.sticky-header {
+
+      position: sticky;
+      top: 0;
+      animation: stickyHeader 0.3s ease forwards;
+
+  }
+
+
+  @keyframes stickyHeader {
+
+     0% {transform: translateY(-80px);}
+     100% {transform: translateY(0px);}
+  }
+
+}
