@@ -1,5 +1,5 @@
 import "./Banner.scss";
-import BannerImg from "../../../assets/calender.png";
+import BannerImg from "../../../assets/hdcalend.png";
 
 const Banner = () => {
   return (

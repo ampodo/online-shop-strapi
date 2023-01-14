@@ -5,6 +5,7 @@
   padding: 0 20px;
   background-color: #fff7eb;
   color: #333333;
+  
 
   @include md {
     padding: 0 40px;
@@ -69,7 +70,10 @@
     }
   }
 
-
+  .logo {
+ 
+    width: 140px;
+  }
 
   &.sticky-header {
 

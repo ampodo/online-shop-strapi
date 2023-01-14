@@ -11,6 +11,10 @@ import Cart from "../Cart/Cart";
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
+
+
+  const navigate = useNavigate();
+
   const handleScroll = () => {
     const offset = window.scrollY;
     if (offset > 200) {
@@ -28,12 +32,12 @@ const Header = () => {
     <header className={`main-header ${scrolled ? "sticky-header" : ""}`}>
       <div className="header-content">
         <ul className="left">
-          <li>Home</li>
+          <li onClick={() => navigate("/")}>Home</li>
           <li>About</li>
           <li>Catalog</li>
         </ul>
-        <div className="center">
-          <img className="logo" src="/icons/150logo.png" alt="" />
+        <div className="center" onClick={() => navigate("/")}>
+          <img className="logo" src="/icons/logotype1.png" alt=""  />
         </div>
         <div className="right">
           <TbSearch />
