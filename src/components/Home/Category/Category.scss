@@ -1,1 +1,55 @@
 @import "../../../css-config/mixins.scss";
+
+
+
+.category-shop {
+   
+     margin: 25px 0px;
+     
+     @include md {
+           margin: 50px 20px;
+
+     }
+  
+
+
+     .categories {
+
+         display: flex;
+         flex-flow: wrap;
+         gap: 10px;
+         
+
+         .category {
+
+             
+             width: calc(50% - 5px);
+             cursor: pointer;
+             overflow: hidden;
+            
+             
+             @include md {
+
+                 width: calc(25% - 10px);
+             }
+
+             img {
+
+                 width: 100%;
+                 display: block;
+                 transition: all ease 0.3s;
+                 border-radius: 8px;
+             }
+
+             &:hover {
+
+                   img {
+
+                    opacity: 0.8;
+                   }
+             }
+              
+         }
+
+     }
+}
