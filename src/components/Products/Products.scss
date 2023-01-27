@@ -1,0 +1,42 @@
+@import "../../css-config/mixins.scss";
+
+
+
+.products-container {
+    margin: 50px ;
+   
+    
+    @include md {
+        margin: 75px 25px;
+    }
+    .heading {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items:center;
+        margin-bottom: 25px;
+        font-size: 18px;
+        color: #6a6562;
+        font-weight: 500;
+        text-transform: uppercase;
+        @include md {
+            margin-bottom: 35px;
+            font-size: 24px;
+        }
+       
+        
+    }
+    .products {
+        display: flex;
+        flex-flow: wrap;
+        gap: 10px;
+        @include md {
+            gap: 20px;
+        }
+    }
+}
+
+
+
+
