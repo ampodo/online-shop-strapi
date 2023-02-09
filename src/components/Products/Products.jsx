@@ -2,14 +2,12 @@ import "./Products.scss";
 import Product from "./Product/Product";
 
 
-const Products = () => {
+const Products = ({ innerPage, headingText }) => {
     return (
 
        
           <div className="products-container">
-            <div className="heading"> 
-                Products on demand 
-                  </div>
+              {!innerPage &&  <div className="heading">{headingText}</div>}
                <div className="products">
                    <Product />
                    <Product />

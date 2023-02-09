@@ -14,8 +14,8 @@
         width: 100%;
         height: 170px;
         background-color: rgba(0, 0, 0, 0.05);
-        margin-bottom: 10px;
-        padding: 25px;
+        margin-bottom: 15px;
+        padding: 30px;
         display: flex;
         align-items: center;
         border-radius: 8px;
@@ -35,9 +35,13 @@
 
         @include md {
               
-             height: 250px;
+             height: 200px;
         }
 
+        @include lg {
+              
+            height: 280px;
+       }
         
 
         img {

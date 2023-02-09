@@ -33,8 +33,8 @@ const Header = () => {
       <div className="header-content">
         <ul className="left">
           <li onClick={() => navigate("/")}>Home</li>
-          <li>About</li>
-          <li>Catalog</li>
+          <li onClick={() => navigate("/about")}>About</li>
+          <li onClick={() => navigate("/category/:id")}>Catalog</li>
         </ul>
         <div className="center" onClick={() => navigate("/")}>
           <img className="logo" src="/icons/logotype1.png" alt=""  />

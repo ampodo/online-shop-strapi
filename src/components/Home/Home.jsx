@@ -14,7 +14,7 @@ const Home = () => {
                      <div className="main-content">
                      <div className="layout">
                    <Category />
-                   <Products/>
+                   <Products headingText="Products on demand"/>
                    </div>
                    </div>
      </div>
