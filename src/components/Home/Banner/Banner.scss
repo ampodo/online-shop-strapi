@@ -5,10 +5,14 @@
      padding: 40px 0px;
      position: relative;
      background-color: #ffffff;
+     
+     
      @include md {
         height: calc(100vh - 80px);
      }
      .content {
+        
+          
           height: 100%;
           display: flex;
           justify-content: flex-end;
@@ -17,9 +21,15 @@
           max-width: calc(100% - 20px);
           margin: 0 auto;
           position: relative;
+          
+          
+          
+          
           @include md {
                flex-direction: row;
                max-width: 1200px;
+               
+               
           }
 
      }
@@ -28,9 +38,10 @@
   
         position: relative;
         width: 350px;
-        margin-bottom: 20px;
-        margin-left: 0;
-        margin-right: 0;
+        
+        
+        
+      
         
         @include md {
 
@@ -73,7 +84,7 @@
                 
                
                transform: translateY(-20%);
-               margin-top:80px;
+               margin-top: 5px;
                margin-left: 30px;
                 
               }
@@ -89,6 +100,8 @@
                   margin-bottom: 20px;
                @include md {
                       font-size: 55px;
+                      
+                      
                   }
               }
 
@@ -105,8 +118,8 @@
                          max-width: 500px;
                          font-size: 19px;
                          line-height: 24px;
-                         margin-bottom: 40px;
                          font-weight: 300;
+                         
                        
                         
                   }
@@ -156,3 +169,10 @@
              }
         }
  }
+
+
+
+ 
+
+
+

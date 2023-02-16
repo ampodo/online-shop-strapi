@@ -11,7 +11,7 @@ import Cart from "../Cart/Cart";
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
-
+  const [showCart, setShowCart] = useState(false);
 
   const navigate = useNavigate();
 
@@ -29,26 +29,29 @@ const Header = () => {
   }, []);
 
   return (
-    <header className={`main-header ${scrolled ? "sticky-header" : ""}`}>
-      <div className="header-content">
-        <ul className="left">
-          <li onClick={() => navigate("/")}>Home</li>
-          <li onClick={() => navigate("/about")}>About</li>
-          <li onClick={() => navigate("/category/:id")}>Catalog</li>
-        </ul>
-        <div className="center" onClick={() => navigate("/")}>
-          <img className="logo" src="/icons/logotype1.png" alt=""  />
+    <>
+      <header className={`main-header ${scrolled ? "sticky-header" : ""}`}>
+        <div className="header-content">
+          <ul className="left">
+            <li onClick={() => navigate("/")}>Home</li>
+            <li onClick={() => navigate("/about")}>About</li>
+            <li onClick={() => navigate("/category/:id")}>Catalog</li>
+          </ul>
+          <div className="center" onClick={() => navigate("/")}>
+            <img className="logo" src="/icons/logotype1.png" alt="" />
+          </div>
+          <div className="right">
+            <TbSearch />
+            <AiOutlineHeart />
+            <span className="cart-icon" onClick={() => setShowCart(true)}>
+              <span>{8}</span>
+              <CgShoppingCart />
+            </span>
+          </div>
         </div>
-        <div className="right">
-          <TbSearch />
-          <AiOutlineHeart />
-          <span className="cart-icon">
-            <span>{8}</span>
-            <CgShoppingCart />
-          </span>
-        </div>
-      </div>
-    </header>
+      </header>
+      {showCart && <Cart setShowCart={setShowCart} />}
+    </>
   );
 };
 
