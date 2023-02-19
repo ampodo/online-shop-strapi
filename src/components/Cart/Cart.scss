@@ -142,21 +142,26 @@
                     outline: 0;
                     border: 0;
                     height: 40px;
-                    width: 150px;
-                    display: flex;
+                    width: 100%;
+                    display: block;
+                    box-sizing: border-box;
                     align-items: center;
                     justify-content: center;
                     cursor: pointer;
                     font-size: 14px;
                     color: white;
-                    background: #79c2d0;
+                    background: #28282B;
                     border-radius: 8px;
                     transition: all ease 0.3s;
-
+                    
                     &:hover {
-        
-                        background-color: #98d2de;
+                   
+                        background-color: #525252;
+                        
                     }
+
+                    
+
                 }
 
 

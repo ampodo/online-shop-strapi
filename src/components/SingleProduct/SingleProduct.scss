@@ -129,13 +129,13 @@
                         cursor: pointer;
                         font-size: 16px;
                         color: white;
-                        background: #79c2d0;
+                        background: #28282B;
                         border-radius: 8px;
                         transition: all ease 0.3s;
                         flex-grow: 1;
                         &:hover {
                     
-                            background-color: #98d2de;
+                            background-color: #525252;
                         }
                         @include md {
                             flex-grow: unset;

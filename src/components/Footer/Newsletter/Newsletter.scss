@@ -58,12 +58,13 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                letter-spacing: 1px;
                 cursor: pointer;
-                font-size: 16px;
-                color: white;
-                background: #0e1111;
-                border-bottom: 3px solid #000000;
+                font-size: 12px;
+                color: black;
+                background: #ffffff;
                 border-radius: 8px;
+                margin-left: 10px;
                 
                 @include md {
                     width: 120px;

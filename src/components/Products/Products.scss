@@ -2,11 +2,14 @@
 
 
 .products-container {
-    margin: 50px ;
    
+   
+    margin: 50px ;
+    
     
     @include md {
-        margin: 65px 25px;
+        margin: 55px 25px;
+        margin-top: 40px;
     }
     .heading {
 

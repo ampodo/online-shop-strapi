@@ -13,7 +13,7 @@ const Newsletter = () => {
         <span className="big-text">Sign up to receive latest updates</span>
         <div className="form">
           <input type="text" placeholder="Email Address" />
-          <button>Subscribe</button>
+          <button>SUBSCRIBE</button>
         </div>
         <span className="text">
           Will be used in accordance with our Privacy Policy

@@ -45,7 +45,7 @@
         
         @include md {
 
-            width: 410px;
+            width: 380px;
             margin-right: 60px;
             margin-top: 50px;
             margin-bottom: 0;
@@ -53,7 +53,7 @@
 
         @include lg {
 
-            width: 450px;
+            width: 400px;
             margin-top: 30px;
             
         }
@@ -140,13 +140,14 @@
                  color: white;
                  font-size: 13px;
                  font-weight: 500;
-                 padding: 10px 25px;
+                 padding: 10px 20px;
                  cursor: pointer;
-                 background-color: #79c2d0;
+                 background-color:#28282B;
                  border-radius: 8px;
                  transition: all ease 0.3s;
                  &:hover {
-                    background-color: #98d2de;
+                   
+                    background-color: #525252;
                     
                 }
               }
@@ -157,14 +158,15 @@
                 font-size: 13px;
                 color: white;
                 font-weight: 500;
-                padding: 10px 25px;
+                padding: 10px 20px;
                 cursor: pointer;
-                background-color: #79c2d0;
+                background-color: #28282B;
                 border-radius: 8px;
                 transition: all ease 0.3s;
                 &:hover {
                     
-                    background-color: #98d2de;
+                    background-color: #525252;
+                    
                 }
              }
         }
