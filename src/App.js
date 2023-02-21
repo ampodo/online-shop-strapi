@@ -17,7 +17,7 @@ function App() {
           <Route path="/category/:id" element={<Category />} />
           <Route path="/product/:id" element={<SingleProduct />} />
         </Routes>
-        <Newsletter/>
+        <Newsletter />
         <Footer />
       </AppContext>
     </BrowserRouter>
@@ -25,3 +25,4 @@ function App() {
 }
 
 export default App;
+
