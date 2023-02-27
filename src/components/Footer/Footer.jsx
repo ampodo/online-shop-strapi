@@ -1,10 +1,12 @@
 import React from "react";
 import "./Footer.scss";
+import { useNavigate } from "react-router-dom";
 import { FaLocationArrow, FaMobileAlt, FaEnvelope } from "react-icons/fa";
 import Payment from "../../assets/payments.png";
 const Footer = () => {
 
 
+    const navigate = useNavigate();
 
     const today = new Date(); 
 
@@ -37,14 +39,15 @@ const Footer = () => {
                 </div>
                 <div className="col">
                     <div className="title">Categories</div>
-                    <span className="text">DERM ACTE</span>
-                    <span className="text">Hydraderm</span>
-                    <span className="text">MEN</span>
+                    <span className="text"onClick={() => navigate("/category/1")}>DERM ACTE</span>
+                    <span className="text" onClick={() => navigate("/category/5")} >Hydraderm</span>
+                    <span className="text" onClick={() => navigate("/category/4")}  >MEN</span>
+                    <span className="text" onClick={() => navigate("/category/6")}>Seve Miracle</span>
                     
                 </div>
                 <div className="col">
                     <div className="title">Pages</div>
-                    <span className="text">Home</span>
+                    <span className="text" onClick={() => navigate("/")}> Home</span>
                     <span className="text">About</span>
                     <span className="text">Privacy Policy</span>
                     <span className="text">Returns</span>

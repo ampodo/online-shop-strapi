@@ -1,25 +1,26 @@
-import "./Category.scss";
-import derm1 from "../../../assets/category/derm1.jpg";
-import hydra2 from "../../../assets/category/hydra2.jpg";
-import men3 from "../../../assets/category/men3.jpg";
-import sevemiracle from "../../../assets/category/sevemiracle.jpg";
 
-const Category = () => {
+import { useNavigate } from "react-router-dom";
+import "./Category.scss";
+
+
+const Category = ({ categories }) => {
+  const navigate = useNavigate();
+
   return (
     <div className="category-shop">
       <div className="categories">
-        <div className="category">
-          <img src={derm1} alt="" />
-        </div>
-        <div className="category">
-          <img src={hydra2} alt="" />
-        </div>
-        <div className="category">
-          <img src={men3} alt="" />
-        </div>
-        <div className="category">
-          <img src={sevemiracle} alt="" />
-        </div>
+        {categories?.data?.map((item) => (
+          <div
+            key={item.id}
+            className="category"
+            onClick={() => navigate(`/category/${item.id}`)}>
+            <img
+              src={
+                process.env.REACT_APP_DEV_URL +
+                item.attributes.img.data.attributes.url
+              } alt=""/>
+          </div>
+        ))}
       </div>
     </div>
   );
