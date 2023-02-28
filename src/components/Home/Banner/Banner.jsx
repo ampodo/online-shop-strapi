@@ -2,6 +2,13 @@ import "./Banner.scss";
 import BannerImg from "../../../assets/hdcalend.png";
 
 const Banner = () => {
+  const handleScroll = () => {
+    window.scrollTo({
+      top: 1000, // targeting products section
+      behavior: "smooth",
+    });
+  };
+
   return (
     <div className="hero-banner">
       <div className="content">
@@ -13,7 +20,9 @@ const Banner = () => {
           </p>
           <div className="action">
             <div className="banner-action-v1">Read More</div>
-            <div className="banner-action-v2">Shop Now</div>
+            <div className="banner-action-v2" onClick={handleScroll}>
+              Shop Now
+            </div>
           </div>
         </div>
         <img className="banner-img" src={BannerImg} alt="" />
