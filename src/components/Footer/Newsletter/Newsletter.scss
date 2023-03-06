@@ -41,7 +41,7 @@
             input {
                 width: 200px;
                 height: 40px;
-                border-radius: 0;
+                border-radius: 8px;
                 border: 1px solid rgba(0, 0, 0, 0.2);
                 padding: 0 12px;
                 font-size: 16px;
@@ -51,24 +51,26 @@
                 }
             }
             button {
-                outline: 0;
-                border: 0;
-                height: 40px;
-                width: 100px;
+                
+                border-radius: 8px;
+                padding: 10px 25px;
                 display: flex;
+                border: none;
+                font-weight: bold;
                 align-items: center;
                 justify-content: center;
-                letter-spacing: 1px;
                 cursor: pointer;
-                font-size: 12px;
-                color: black;
-                background: #ffffff;
-                border-radius: 8px;
+                font-size: 15px;
+                background-color: #28282b;
+                color: #ffffff;
                 margin-left: 10px;
-                
-                @include md {
-                    width: 120px;
+                transition: all ease 0.3s;
+                &:hover {
+                   
+                    background-color: #353434;
+                    
                 }
+                
             }
         }
         .social-icons {

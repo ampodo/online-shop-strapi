@@ -32,7 +32,7 @@ const CartItem = () => {
                 -
               </span>
               <span>{item.attributes.quantity}</span>
-              <span onClick={() => handleCartProductQuantity("inc", item)}>
+              <span onClick={() => handleCartProductQuantity ("inc", item)}>
                 +
               </span>
             </div>
