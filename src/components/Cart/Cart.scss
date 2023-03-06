@@ -82,26 +82,14 @@
            .return-cta {
 
 
-            outline: 0;
-            border: 0;
-            height: 40px;
-            width: 160px;
+            
             display: flex;
             align-items: center;
             justify-content: center;
             cursor: pointer;
-            font-size: 14px;
-            color: white;
-            background: #79c2d0;
-            border-radius: 8px;
-            transition: all ease 0.3s;
+            font-size: 12px;
+            color: #007FFF;
             
-            &:hover {
-        
-                background-color: #98d2de;
-            }
-            
-
            }
 
 
