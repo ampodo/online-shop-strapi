@@ -10,13 +10,13 @@ const Newsletter = () => {
   return (
     <div className="newsletter-section">
       <div className="newsletter-content">
-        <span className="big-text">Sign up to receive latest updates</span>
+        <span className="big-text">Sign up to receive latest&nbsp;updates</span>
         <div className="form">
           <input type="text" placeholder="Email Address" />
           <button>SUBSCRIBE</button>
         </div>
         <span className="text">
-          Will be used in accordance with our Privacy Policy
+          Will be used in accordance with our Privacy&nbsp;Policy
         </span>
         <span className="social-icons">
           <div className="icon">

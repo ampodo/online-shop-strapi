@@ -7,6 +7,9 @@ const CartItem = () => {
   const { cartItems, handleCartProductQuantity, handleRemoveFromCart } =
     useContext(Context);
 
+  
+  const cloudinaryUrl = "https://res.cloudinary.com/devqsoqp4/image/upload/";
+
   return (
     <div className="cart-products">
       {cartItems.map((item) => (
@@ -14,13 +17,11 @@ const CartItem = () => {
           <div className="img-container">
             <img
               src={
-                process.env.REACT_APP_DEV_URL +
-                item.attributes.img.data[0].attributes.url
-              }
+                cloudinaryUrl + item.attributes.img.data[0].attributes.url.replace("https://res.cloudinary.com/devqsoqp4/image/upload/", "")}
               alt=""
             />
           </div>
-
+           
           <div className="prod-details">
             <span className="name">{item.attributes.title}</span>
             <MdClose

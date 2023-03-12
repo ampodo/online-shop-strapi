@@ -11,7 +11,7 @@ const SingleProduct = () => {
   const { id } = useParams();
   const { handleAddToCart } = useContext(Context);
   const { data } = useFetch(`/api/products?populate=*&[filters][id]=${id}`);
-
+  
   const increment = () => {
     if (quantity < 3) {
       setQuantity((prevState) => prevState + 1);
@@ -26,18 +26,19 @@ const SingleProduct = () => {
   };
   
   if (!data) return;
+
   const product = data?.data?.[0]?.attributes;
 
+  const cloudinaryUrl = "https://res.cloudinary.com/devqsoqp4/image/upload/";
+  
   return (
     <div className="single-product-main-content">
       <div className="layout">
         <div className="single-product-page">
           <div className="left">
-            <img
+          <img
               src={
-                process.env.REACT_APP_DEV_URL +
-                product.img.data[0].attributes.url
-              }
+                cloudinaryUrl + product.img.data[0].attributes.url.replace("https://res.cloudinary.com/devqsoqp4/image/upload/", "")}
               alt=""
             />
           </div>

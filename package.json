@@ -38,9 +38,11 @@
       "last 1 safari version"
     ]
   },
+
   "devDependencies": {
     "sass": "^1.58.1",
     "sass-loader": "^13.2.0",
     "webpack": "^5.75.0"
-  }
+  },
+  "proxy": "https://server-side-3aru.onrender.com"
 }
