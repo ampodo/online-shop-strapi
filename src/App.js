@@ -7,8 +7,6 @@ import SingleProduct from "./components/SingleProduct/SingleProduct";
 import AppContext from "./utils/context";
 import Newsletter from "./components/Footer/Newsletter/Newsletter";
 
-
-
 function App() {
   return (
     <BrowserRouter>
@@ -27,4 +25,3 @@ function App() {
 }
 
 export default App;
-

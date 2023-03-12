@@ -11,34 +11,39 @@ const SingleProduct = () => {
   const { id } = useParams();
   const { handleAddToCart } = useContext(Context);
   const { data } = useFetch(`/api/products?populate=*&[filters][id]=${id}`);
-  
+
   const increment = () => {
     if (quantity < 3) {
       setQuantity((prevState) => prevState + 1);
     }
   };
-  
+
   const decrement = () => {
     setQuantity((prevState) => {
       if (prevState === 1) return 1;
       return prevState - 1;
     });
   };
-  
+
   if (!data) return;
 
   const product = data?.data?.[0]?.attributes;
 
   const cloudinaryUrl = "https://res.cloudinary.com/devqsoqp4/image/upload/";
-  
+
   return (
     <div className="single-product-main-content">
       <div className="layout">
         <div className="single-product-page">
           <div className="left">
-          <img
+            <img
               src={
-                cloudinaryUrl + product.img.data[0].attributes.url.replace("https://res.cloudinary.com/devqsoqp4/image/upload/", "")}
+                cloudinaryUrl +
+                product.img.data[0].attributes.url.replace(
+                  "https://res.cloudinary.com/devqsoqp4/image/upload/",
+                  ""
+                )
+              }
               alt=""
             />
           </div>

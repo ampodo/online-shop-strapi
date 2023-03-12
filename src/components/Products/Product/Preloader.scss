@@ -1,0 +1,51 @@
+
+.preloader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    background-color: #fff;
+
+  }
+  
+  .preloader__spinner {
+    border: 4px solid #616061;
+    border-top: 4px solid #28282b;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
+    
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+
+// Text part for preloader //
+
+.preloader__text {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #6a6562;
+    margin-left: 10px;
+  }
+  
+
+  
+  
+  
+  
+  

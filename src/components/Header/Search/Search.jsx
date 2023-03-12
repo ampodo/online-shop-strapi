@@ -16,7 +16,7 @@ const Search = ({ setShowSearch }) => {
 
   useEffect(() => {
     if (error) {
-      console.log(error);
+      
     }
   }, [error]);
 
