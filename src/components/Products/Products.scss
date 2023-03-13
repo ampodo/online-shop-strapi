@@ -32,8 +32,6 @@
     .products {
         display: flex;
         flex-flow: wrap;
-        justify-content: center;
-
         gap: 10px;
         @include md {
             gap: 20px;
