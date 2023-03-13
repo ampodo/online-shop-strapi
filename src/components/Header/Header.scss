@@ -28,7 +28,7 @@
     .left {
       list-style-type: none;
       display: none;
-      gap: 25px;
+      
       @include md {
         display: flex;
       }
@@ -38,6 +38,7 @@
         font-weight: bold;
         text-transform: uppercase;
         cursor: pointer;
+        margin-right: 15px;
       }
     }
 
@@ -49,10 +50,15 @@
     .right {
       display: flex;
       align-items: center;
-      gap: 20px;
+      
+      
+     
+
       svg {
         font-size: 20px;
         cursor: pointer;
+        margin: 0 8px;
+        
       }
 
       .cart-icon {

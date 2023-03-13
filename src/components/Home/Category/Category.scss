@@ -17,15 +17,16 @@
 
          display: flex;
          flex-flow: wrap;
-         gap: 10px;
+         justify-content: center;
          
 
          .category {
 
              
-             width: calc(50% - 5px);
+             width: calc(50% - 0px);
              cursor: pointer;
              overflow: hidden;
+             padding: 5px;
             
              
              @include md {
@@ -38,7 +39,8 @@
                  width: 100%;
                  display: block;
                  transition: all ease 0.3s;
-                 border-radius: 8px;
+                 border-radius: 12px;
+                 
              }
 
              &:hover {

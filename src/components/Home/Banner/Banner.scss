@@ -129,12 +129,12 @@
 
                    display: flex;
                    justify-content: center;
-                   gap: 25px;
+                   
                            
 
              @media (max-width: 640px) {
                     
-                      gap: 28px;
+                      
                   }
                    
               }
@@ -150,6 +150,8 @@
                  background-color:#28282B;
                  border-radius: 8px;
                  transition: all ease 0.3s;
+                 margin-right: 15px;
+
                  &:hover {
                    
                     background-color: #525252;
