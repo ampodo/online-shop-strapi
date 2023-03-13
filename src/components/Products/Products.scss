@@ -32,9 +32,11 @@
     .products {
         display: flex;
         flex-flow: wrap;
-        padding: 5px;
+        justify-content: center;
+
+        gap: 10px;
         @include md {
-            padding: 8px;
+            gap: 20px;
         }
     }
 }
