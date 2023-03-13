@@ -36,7 +36,7 @@
         }
         .form {
             display: flex;
-            gap: 5px;
+            grid-gap: 5px;
             margin-bottom: 10px;
             input {
                 width: 200px;
