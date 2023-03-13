@@ -27,7 +27,12 @@
         }
         
         
-       
+        @include sm {
+              
+            height: 260px;
+
+          }
+  
         @include md {
               
              height: 200px;
