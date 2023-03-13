@@ -2,7 +2,7 @@
 
 
 @mixin xs {
-    @media only screen and (min-width: 530px) {
+    @media only screen and (min-width: 480px) {
         @content;
     }
 }

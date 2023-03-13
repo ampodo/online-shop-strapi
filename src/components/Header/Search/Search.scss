@@ -101,7 +101,6 @@
 
                     display: flex;
                     align-items: center;
-                    grid-gap: 10px;
                     padding: 10px 0;
                     border-bottom: 1px solid rgba(0,0,0, 0.1);
                     cursor: pointer;
@@ -131,7 +130,7 @@
                             white-space: nowrap;
                             overflow: hidden;
                             font-size: 16px;
-                            line-height: 1;
+                            line-height: 1.2;
                             margin-bottom: 10px;
                             font-weight: 500;
                             display: block;
@@ -143,7 +142,7 @@
                         .desc {
 
                                font-size: 14px;
-                               line-height: 1;
+                               line-height: 1.2;
                                display: block;
                                text-overflow: ellipsis;
                                white-space: nowrap;

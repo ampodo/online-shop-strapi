@@ -32,10 +32,7 @@
     .products {
         display: flex;
         flex-flow: wrap;
-        grid-gap: 10px;
-        @include md {
-            grid-gap: 20px;
-        }
+        justify-content: center;
     }
 }
 

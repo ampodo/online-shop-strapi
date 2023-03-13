@@ -8,7 +8,7 @@
         margin: 0 auto;
         display: flex;
         flex-flow: wrap;
-        grid-gap: 20px;
+        
         @include md {
             justify-content: space-between;
             
@@ -24,6 +24,7 @@
             .title {
                 margin-bottom: 20px;
                 font-size: 20px;
+                margin-top: 15px;
             }
             .text {
                 color: rgba(0, 0, 0, 0.5);
@@ -58,7 +59,7 @@
             align-items: center;
             flex-direction: column;
             text-align: center;
-            grid-gap: 10px;
+            
             @include md {
                 padding: 0;
                 height: 60px;
