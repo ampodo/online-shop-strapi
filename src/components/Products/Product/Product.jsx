@@ -10,7 +10,7 @@ const Product = ({ data, id }) => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const delay = 500; // 1 second
+    const delay = 400;
     const timeoutId = setTimeout(() => {
       
       setIsLoading(false);
