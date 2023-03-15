@@ -25,3 +25,4 @@ yarn-error.log*
 
 # exclude README file
 README.md
+.env
