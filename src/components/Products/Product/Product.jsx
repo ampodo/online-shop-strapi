@@ -12,7 +12,6 @@ const Product = ({ data, id }) => {
   useEffect(() => {
     const delay = 400;
     const timeoutId = setTimeout(() => {
-      
       setIsLoading(false);
     }, delay);
 

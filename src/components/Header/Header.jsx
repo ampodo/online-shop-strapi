@@ -12,7 +12,7 @@ const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   const [showCart, setShowCart] = useState(false);
   const [showSearch, setShowSearch] = useState(false);
-  const {cartCount} = useContext(Context);
+  const { cartCount } = useContext(Context);
 
   const navigate = useNavigate();
 
@@ -44,7 +44,7 @@ const Header = () => {
           <div className="right">
             <TbSearch onClick={() => setShowSearch(true)} />
             <span className="cart-icon" onClick={() => setShowCart(true)}>
-            {!!cartCount && <span>{cartCount}</span>}
+              {!!cartCount && <span>{cartCount}</span>}
               <CgShoppingCart />
             </span>
           </div>
@@ -52,7 +52,6 @@ const Header = () => {
       </header>
       {showCart && <Cart setShowCart={setShowCart} />}
       {showSearch && <Search setShowSearch={setShowSearch} />}
-
     </>
   );
 };

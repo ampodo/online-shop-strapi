@@ -9,11 +9,7 @@ import Home from "./components/Home/Home";
 import Category from "./components/Category/Category";
 import SingleProduct from "./components/SingleProduct/SingleProduct";
 
-const Loading = () => (
-  <div className="loader">
-    Loading...
-  </div>
-);
+const Loading = () => <div className="loader">Loading... Due to free database tier it may take up to 30 seconds...</div>;
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -22,7 +18,7 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const result = await axios.get("https://server-side-3aru.onrender.com");
+        const result = await axios.get("https://server-side-3aru.onrender.com/");
         setData(result.data);
         setLoading(false);
       } catch (error) {}

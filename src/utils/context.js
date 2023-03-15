@@ -31,7 +31,7 @@ const AppContext = ({ children }) => {
   const handleAddToCart = (product, quantity) => {
     let items = [...cartItems];
     let index = items.findIndex((p) => p.id === product.id);
-    
+
     if (index !== -1) {
       items[index].attributes.quantity += quantity;
     } else {
@@ -40,7 +40,7 @@ const AppContext = ({ children }) => {
     }
     setCartItems(items);
   };
-  
+
   const handleRemoveFromCart = (product) => {
     let items = [...cartItems];
     items = items.filter((p) => p.id !== product.id);
@@ -50,7 +50,7 @@ const AppContext = ({ children }) => {
   const handleCartProductQuantity = (type, product) => {
     let items = [...cartItems];
     let index = items.findIndex((p) => p.id === product.id);
-    if (type  === "inc") {
+    if (type === "inc") {
       if (items[index].attributes.quantity === 3) return;
       items[index].attributes.quantity += 1;
     } else if (type === "dec") {
