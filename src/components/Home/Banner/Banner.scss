@@ -21,9 +21,14 @@
           max-width: calc(100% - 20px);
           margin: 0 auto;
           position: relative;
-          margin-top:-20px;
           
           
+          @media (max-width: 640px) {
+           
+            margin-top: -30px;
+                      
+        }
+
           
           @include md {
                flex-direction: row;
@@ -31,6 +36,7 @@
                
                
           }
+
 
      }
 
@@ -130,14 +136,9 @@
                    display: flex;
                    justify-content: center;
                    
-                           
-
-             @media (max-width: 640px) {
-                    
-                      
-                  }
-                   
-              }
+            
+                 
+            }
 
               .banner-action-v1 {
                    
