@@ -11,8 +11,7 @@ import SingleProduct from "./components/SingleProduct/SingleProduct";
 
 const Loading = () => (
   <div className="loader">
-    Loading...Delay of up to 30 seconds for the first request from the sever is
-    possible as this database uses free tier...
+    Loading...
   </div>
 );
 
