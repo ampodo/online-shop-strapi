@@ -1,6 +1,9 @@
 import { createContext, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
+import { toast } from "react-toastify";
+
+
 
 export const Context = createContext();
 
@@ -29,15 +32,22 @@ const AppContext = ({ children }) => {
   }, [cartItems]);
 
   const handleAddToCart = (product, quantity) => {
-    let items = [...cartItems];
-    let index = items.findIndex((p) => p.id === product.id);
-
+    const items = [...cartItems];
+    const index = items.findIndex((p) => p.id === product.id);
+  
     if (index !== -1) {
-      items[index].attributes.quantity += quantity;
+      const updatedQuantity = items[index].attributes.quantity + quantity;
+      if (updatedQuantity <= 5) {
+        items[index].attributes.quantity = updatedQuantity;
+      } else {
+        items[index].attributes.quantity = 5;
+        toast.error("You can add a maximum of five products of a single item to your cart");
+      }
     } else {
-      product.attributes.quantity = quantity;
-      items = [...items, product];
+      product.attributes.quantity = Math.min(quantity, 5);
+      items.push(product);
     }
+  
     setCartItems(items);
   };
 
@@ -48,17 +58,16 @@ const AppContext = ({ children }) => {
   };
 
   const handleCartProductQuantity = (type, product) => {
-    let items = [...cartItems];
-    let index = items.findIndex((p) => p.id === product.id);
-    if (type === "inc") {
-      if (items[index].attributes.quantity === 3) return;
-      items[index].attributes.quantity += 1;
-    } else if (type === "dec") {
-      if (items[index].attributes.quantity === 1) return;
-      items[index].attributes.quantity -= 1;
+    const index = cartItems.findIndex((item) => item.id === product.id);
+    let newCartItems = [...cartItems];
+  
+    if (type === "inc" && cartItems[index].attributes.quantity < 5) {
+      newCartItems[index].attributes.quantity += 1;
+    } else if (type === "dec" && cartItems[index].attributes.quantity > 1) {
+      newCartItems[index].attributes.quantity -= 1;
     }
-
-    setCartItems(items);
+  
+    setCartItems(newCartItems);
   };
 
   return (

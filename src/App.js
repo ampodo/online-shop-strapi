@@ -8,6 +8,11 @@ import axios from "axios";
 import Home from "./components/Home/Home";
 import Category from "./components/Category/Category";
 import SingleProduct from "./components/SingleProduct/SingleProduct";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
+
+
 
 const Loading = () => <div className="loader">Loading... Due to free database tier initial render may take up to 30 seconds...</div>;
 
@@ -15,10 +20,12 @@ function App() {
   const [loading, setLoading] = useState(true);
   const [data, setData] = useState(null);
 
+ 
+
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const result = await axios.get("https://server-side-3aru.onrender.com/");
+        const result = await axios.get("https://server-side-3aru.onrender.com");
         setData(result.data);
         setLoading(false);
       } catch (error) {}
@@ -39,6 +46,8 @@ function App() {
 
   return (
     <BrowserRouter>
+    <ToastContainer position="top-center" autoClose={3000} closeOnClick={false} pauseOnHover={false}  limit={1}/>
+     
       <AppContext>
         <Header />
         <Routes>

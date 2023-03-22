@@ -13,18 +13,18 @@ const SingleProduct = () => {
   const { data } = useFetch(`/api/products?populate=*&[filters][id]=${id}`);
 
   const increment = () => {
-    if (quantity < 3) {
+    if (quantity < 5) {
       setQuantity((prevState) => prevState + 1);
     }
   };
-
+  
   const decrement = () => {
     setQuantity((prevState) => {
       if (prevState === 1) return 1;
       return prevState - 1;
     });
   };
-
+  
   if (!data) return;
 
   const product = data?.data?.[0]?.attributes;
