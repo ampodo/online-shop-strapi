@@ -11,16 +11,16 @@ import SingleProduct from "./components/SingleProduct/SingleProduct";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-
-
-
-const Loading = () => <div className="loader">Loading... Due to free database tier initial render may take up to 30 seconds...</div>;
+const Loading = () => (
+  <div className="loader">
+    Loading... Due to free database tier initial render may take up to 30
+    seconds...
+  </div>
+);
 
 function App() {
   const [loading, setLoading] = useState(true);
   const [data, setData] = useState(null);
-
- 
 
   useEffect(() => {
     const fetchData = async () => {
@@ -46,8 +46,14 @@ function App() {
 
   return (
     <BrowserRouter>
-    <ToastContainer position="top-center" autoClose={3000} closeOnClick={false} pauseOnHover={false}  limit={1}/>
-     
+      <ToastContainer
+        position="top-center"
+        autoClose={3000}
+        closeOnClick={false}
+        pauseOnHover={false}
+        limit={1}
+      />
+
       <AppContext>
         <Header />
         <Routes>

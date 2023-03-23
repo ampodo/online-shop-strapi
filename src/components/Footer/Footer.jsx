@@ -42,13 +42,13 @@ const Footer = () => {
           <span className="text" onClick={() => navigate("/category/1")}>
             DERM ACTE
           </span>
-          <span className="text" onClick={() => navigate("/category/5")}>
+          <span className="text" onClick={() => navigate("/category/2")}>
             Hydraderm
           </span>
-          <span className="text" onClick={() => navigate("/category/4")}>
+          <span className="text" onClick={() => navigate("/category/3")}>
             MEN
           </span>
-          <span className="text" onClick={() => navigate("/category/6")}>
+          <span className="text" onClick={() => navigate("/category/4")}>
             Seve Miracle
           </span>
         </div>
