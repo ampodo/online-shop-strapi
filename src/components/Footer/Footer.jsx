@@ -3,8 +3,13 @@ import "./Footer.scss";
 import { useNavigate } from "react-router-dom";
 import { FaLocationArrow, FaMobileAlt, FaEnvelope } from "react-icons/fa";
 import Payment from "../../assets/payments.png";
+
 const Footer = () => {
   const navigate = useNavigate();
+
+  const handleClick = (categoryId) => {
+    navigate(`/category/${categoryId}`);
+  };
 
   const today = new Date();
 
@@ -39,16 +44,16 @@ const Footer = () => {
         </div>
         <div className="col">
           <div className="title">Categories</div>
-          <span className="text" onClick={() => navigate("/category/1")}>
+          <span className="text" onClick={() => handleClick(1)}>
             DERM ACTE
           </span>
-          <span className="text" onClick={() => navigate("/category/2")}>
+          <span className="text" onClick={() => handleClick(2)}>
             Hydraderm
           </span>
-          <span className="text" onClick={() => navigate("/category/3")}>
+          <span className="text" onClick={() => handleClick(3)}>
             MEN
           </span>
-          <span className="text" onClick={() => navigate("/category/4")}>
+          <span className="text" onClick={() => handleClick(4)}>
             Seve Miracle
           </span>
         </div>
