@@ -21,14 +21,14 @@ const Category = () => {
         </div>
         <div className="category">
           <img
-            src="https://res.cloudinary.com/devqsoqp4/image/upload/v1678393173/hydra2_e5c1465c64.jpg"
+            src="https://res.cloudinary.com/devqsoqp4/image/upload/v1678393173/hydra2_e5c1465c64.png"
             alt=""
             onClick={() => handleImageClick(2)}
           />
         </div>
         <div className="category">
           <img
-            src="https://res.cloudinary.com/devqsoqp4/image/upload/v1678393173/men3_0e9a2a2780.jpg"
+            src="https://res.cloudinary.com/devqsoqp4/image/upload/v1678393173/men3_0e9a2a2780.png"
             alt=""
             onClick={() => handleImageClick(3)}
           />

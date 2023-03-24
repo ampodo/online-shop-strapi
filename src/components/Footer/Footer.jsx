@@ -2,7 +2,7 @@ import React from "react";
 import "./Footer.scss";
 import { useNavigate } from "react-router-dom";
 import { FaLocationArrow, FaMobileAlt, FaEnvelope } from "react-icons/fa";
-import Payment from "../../assets/payments.png";
+import Payment from "../../assets/payments.webp";
 
 const Footer = () => {
   const navigate = useNavigate();

@@ -1,5 +1,5 @@
 import "./Banner.scss";
-import BannerImg from "../../../assets/hdcalend.png";
+import BannerImg from "../../../assets/hdcalend.webp";
 
 const Banner = () => {
   const handleScroll = () => {
