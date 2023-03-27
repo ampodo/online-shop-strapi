@@ -11,8 +11,8 @@ import { loadStripe } from "@stripe/stripe-js"
 const Cart = ({ setShowCart }) => {
   const { cartItems, cartSubTotal } = useContext(Context);
 
-  const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY);
-
+  const stripePromise = loadStripe(`${process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY}`);
+  
   const handlePayment = async () => {
     try {
         const stripe = await stripePromise;
