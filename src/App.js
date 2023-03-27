@@ -10,6 +10,8 @@ import Category from "./components/Category/Category";
 import SingleProduct from "./components/SingleProduct/SingleProduct";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import SuccessfulPayment from "./components/SuccessfulPayment/SuccessfulPayment";
+
 
 const Loading = () => (
   <div className="loader">
@@ -60,6 +62,8 @@ function App() {
           <Route path="/" element={<Home data={data} />} />
           <Route path="/category/:id" element={<Category data={data} />} />
           <Route path="/product/:id" element={<SingleProduct data={data} />} />
+          <Route path="/success" element={<SuccessfulPayment />} />
+        
         </Routes>
         <Newsletter />
         <Footer />
