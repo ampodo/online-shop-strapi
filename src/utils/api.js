@@ -22,10 +22,4 @@ export const fetchDataFromApi = async (url) => {
 };
 
 
-export const makePaymentRequest = axios.create({
-        baseURL: process.env.REACT_APP_API_URL,
-        headers: {
-          Authorization: "bearer " + process.env.REACT_APP_STRIPE_APP_KEY,
-        },
-});
 
