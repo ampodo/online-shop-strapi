@@ -1,4 +1,5 @@
 import axios from "axios";
+import { encode } from "js-base64";
 
 const params = {
   headers: {
@@ -25,8 +26,10 @@ export const fetchDataFromApi = async (url) => {
 export const makePaymentRequest = axios.create({
   baseURL: process.env.REACT_APP_API_URL,
   headers: {
-    Authorization: `Basic ${Buffer.from(process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY + ":").toString("base64")}`,
+    Authorization: `Basic ${encode(`${process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY}:`)}`,
   },
 });
+
+
 
 
