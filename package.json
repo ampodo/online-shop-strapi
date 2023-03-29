@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@loadable/component": "^5.15.3",
+    "@stripe/react-stripe-js": "^2.1.0",
     "@stripe/stripe-js": "^1.52.0",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
