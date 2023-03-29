@@ -23,12 +23,12 @@ export const fetchDataFromApi = async (url) => {
 
 
 
-const stripePublicKey = process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY;
+const stripeSecretKey = process.env.STRIPE_KEY;
 
 export const makePaymentRequest = axios.create({
   baseURL: process.env.REACT_APP_API_URL,
   headers: {
-    Authorization: `Bearer ${stripePublicKey}`,
+    Authorization: `Bearer ${stripeSecretKey}`,
     "Content-Type": "application/json",
   },
 });
