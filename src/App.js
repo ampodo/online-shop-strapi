@@ -27,7 +27,7 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const result = await axios.get("http://localhost:1337");
+        const result = await axios.get("https://server-side-3aru.onrender.com");
         setData(result.data);
         setLoading(false);
       } catch (error) {}
