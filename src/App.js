@@ -12,7 +12,6 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import SuccessfulPayment from "./components/SuccessfulPayment/SuccessfulPayment";
 
-
 const Loading = () => (
   <div className="loader">
     Loading... Due to free database tier initial render may take up to 30
@@ -63,7 +62,6 @@ function App() {
           <Route path="/category/:id" element={<Category data={data} />} />
           <Route path="/product/:id" element={<SingleProduct data={data} />} />
           <Route path="/success" element={<SuccessfulPayment />} />
-        
         </Routes>
         <Newsletter />
         <Footer />
