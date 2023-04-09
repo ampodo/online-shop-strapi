@@ -11,11 +11,6 @@ const Products = ({ products, innerPage, headingText }) => {
     setItemsPerPage(products?.data?.length);
   };
 
-  const handleShowLessClick = () => {
-    setShowMore(false);
-    setItemsPerPage(12);
-  };
-
   return (
     <div className="products-container">
       {!innerPage && <div className="heading">{headingText}</div>}
@@ -26,17 +21,11 @@ const Products = ({ products, innerPage, headingText }) => {
             <Product key={item.id} id={item.id} data={item.attributes} />
           ))}
       </div>
-      {products?.data?.length > 12 && (
+      {products?.data?.length > 12 && !showMore && (
         <div className="nav-buttons">
-          {!showMore ? (
-            <button className="show-more-btn" onClick={handleShowMoreClick}>
-              Show More
-            </button>
-          ) : (
-            <button className="show-less-btn" onClick={handleShowLessClick}>
-              Show Less
-            </button>
-          )}
+          <button className="show-more-btn" onClick={handleShowMoreClick}>
+            Show More
+          </button>
         </div>
       )}
     </div>
