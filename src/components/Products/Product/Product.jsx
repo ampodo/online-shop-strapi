@@ -23,7 +23,7 @@ const Product = ({ data, id }) => {
   if (isLoading) {
     return <Preloader />;
   }
-
+   
   return (
     <div className="product-card" onClick={() => navigate(`/product/${id}`)}>
       <div className="thumbnail">
