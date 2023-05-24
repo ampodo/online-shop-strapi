@@ -5,7 +5,7 @@ import { useState } from "react";
 const Products = ({ products, innerPage, headingText }) => {
   const [showMore, setShowMore] = useState(false);
   const [itemsPerPage, setItemsPerPage] = useState(12);
-
+  
   const handleShowMoreClick = () => {
     setShowMore(true);
     setItemsPerPage(products?.data?.length);
