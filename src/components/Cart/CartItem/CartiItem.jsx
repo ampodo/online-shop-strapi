@@ -7,9 +7,6 @@ const CartItem = () => {
   const { cartItems, handleCartProductQuantity, handleRemoveFromCart } =
     useContext(Context);
 
-  
-
-
   const cloudinaryUrl = "https://res.cloudinary.com/devqsoqp4/image/upload/";
 
   return (

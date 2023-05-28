@@ -1,10 +1,11 @@
 import { useEffect, useContext } from "react";
 import "./Home.scss";
-import Banner from "./Banner/Banner";
 import Products from "../Products/Products";
 import { fetchDataFromApi } from "../../utils/api";
 import { Context } from "../../utils/context";
 import Category from "./Category/Category";
+import Slider  from "./Slider/Slider";
+
 
 const Home = () => {
   const { products, setProducts } = useContext(Context);
@@ -21,7 +22,7 @@ const Home = () => {
 
   return (
     <div>
-      <Banner />
+     <Slider />
       <div className="main-content">
         <div className="layout">
           <Category />

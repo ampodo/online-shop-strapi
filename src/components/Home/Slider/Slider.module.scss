@@ -1,0 +1,59 @@
+.container {
+    .myswiper {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      
+
+        .swiperslide {
+            position: relative;
+            -webkit-transform: translateZ(0);
+          
+           
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                
+
+            
+            }
+           
+           
+           
+            .button {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background: #28282B;
+                color: #ffffff;
+                padding: 15px 35px;
+                font-weight: bold;
+                border: none;
+                border-radius: 8px;
+                cursor: pointer;
+                font-size: 17px;
+                letter-spacing: 2px;
+                transition: all ease 0.3s;
+                &:hover {
+        
+                    background-color: #464545;
+                    
+                }
+
+                @media (max-width: 640px) {
+                    font-size: 15px;
+                    padding: 12px 25px;
+                  }
+
+              }
+
+
+        }
+    }
+
+}

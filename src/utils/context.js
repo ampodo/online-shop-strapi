@@ -23,6 +23,7 @@ const AppContext = ({ children }) => {
     }
   }, []);
 
+  
   useEffect(() => {
     localStorage.setItem("cartItems", JSON.stringify(cartItems));
     const count = cartItems.reduce(
