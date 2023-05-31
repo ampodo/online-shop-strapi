@@ -12,13 +12,6 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import SuccessfulPayment from "./components/SuccessfulPayment/SuccessfulPayment";
 
-const Loading = () => (
-  <div className="loader">
-    Loading... Due to free database tier initial render may take up to 30
-    seconds...
-  </div>
-);
-
 function App() {
   const [loading, setLoading] = useState(true);
   const [data, setData] = useState(null);
@@ -36,7 +29,7 @@ function App() {
   }, []);
 
   if (loading) {
-    return <Loading />;
+    return;
   }
 
   return (
