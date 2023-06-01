@@ -50,9 +50,15 @@
                     padding: 12px 25px;
                   }
 
+
+                @media (min-width: 1600px) {
+                    font-size: 19px;
+                    padding: 20px 40px;
+                  }                  
+
               }
 
-
+            
         }
     }
 

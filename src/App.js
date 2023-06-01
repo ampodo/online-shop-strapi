@@ -36,6 +36,10 @@ function App() {
     }
   }, [loading]);
 
+  useEffect(() => {
+    ReactGA.initialize('G-FKK8CDZ0NJ');
+  }, []); 
+
   if (loading) {
     return null;
   }
