@@ -11,7 +11,6 @@ import SingleProduct from "./components/SingleProduct/SingleProduct";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import SuccessfulPayment from "./components/SuccessfulPayment/SuccessfulPayment";
-import ReactGA from 'react-ga';
 
 
 function App() {
@@ -30,15 +29,7 @@ function App() {
     fetchData();
   }, []);
 
-  useEffect(() => {
-    if (!loading) {
-      ReactGA.pageview(window.location.pathname + window.location.search);
-    }
-  }, [loading]);
-
-  useEffect(() => {
-    ReactGA.initialize('G-FKK8CDZ0NJ');
-  }, []); 
+  
 
   if (loading) {
     return null;
