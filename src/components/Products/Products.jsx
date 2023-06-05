@@ -23,7 +23,7 @@ const Products = ({ products, innerPage, headingText }) => {
       </div>
       {products?.data?.length > 12 && !showMore && (
         <div className="nav-buttons">
-          <button className="show-more-btn" onClick={handleShowMoreClick}>
+          <button data-testid="show-more-btn" className="show-more-btn" onClick={handleShowMoreClick}>
             Show More
           </button>
         </div>
