@@ -6,8 +6,9 @@ import "swiper/css/effect-fade";
 import "swiper/css";
 import { useNavigate } from "react-router-dom";
 import Miracle from "../../../assets/image.webp";
-import Banner2 from "../../../assets/banner2.webp";
+import Abricot from "../../../assets/abricot.webp";
 import styles from "./Slider.module.scss";
+
 
 const Slider = () => {
   const handleScroll = () => {
@@ -46,7 +47,7 @@ const Slider = () => {
         </SwiperSlide>
 
         <SwiperSlide className={styles.swiperslide}>
-          <img src={Banner2} alt="" />
+          <img src={Abricot} alt="" />
           <button className={styles.button} onClick={() => handleClick(1)}>
             DISCOVER
           </button>
