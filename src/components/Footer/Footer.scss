@@ -15,6 +15,16 @@
         }
         .col {
             max-width: 300px;
+            margin-right: 12px;
+
+            @media (max-width: 959px) {
+                margin-right: 14px;
+            }
+
+            @media (max-width: 795px) {
+                margin-right: 16px;
+            }
+
             &:nth-child(3) {
                 width: 150px;
                 @include md {
@@ -75,4 +85,7 @@
             }
         }
     }
+
+    
 }
+
