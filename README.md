@@ -14,5 +14,7 @@ STRIPE TEST CARD NUMBERS : 4242 4242 4242 4242 Check the link and give it a star
 
 
 
+![Online Shop](https://github.com/ampodo/online-shop-strapi/blob/main/catalog.png)
+
 
 
